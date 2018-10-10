@@ -11,6 +11,16 @@ public class MenorPreco {
 		produtos[3] = new Produto("Fusca", 55000);
 		produtos[4] = new Produto("CLio", 7000);
 
+		int menorPreco = menorPreco(produtos);
+
+		System.out.println(menorPreco);
+		System.out.println("O veiculo "+ produtos[menorPreco].getNome()+
+				", é o de menor valor, custando R$"+ produtos[menorPreco].getValor());
+	}
+
+	
+	
+	private static int menorPreco(Produto[] produtos) {
 		int menorPreco = 0;
 
 		for (int atual = 0; atual < produtos.length; atual++) {
@@ -18,10 +28,7 @@ public class MenorPreco {
 				menorPreco = atual;
 			}
 		}
-
-		System.out.println(menorPreco);
-		System.out.println("O veiculo "+ produtos[menorPreco].getNome()+
-				", é o de menor valor, custando R$"+ produtos[menorPreco].getValor());
+		return menorPreco;
 	}
 
 }
