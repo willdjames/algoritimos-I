@@ -1,6 +1,6 @@
 package al.menorPreco;
 
-public class MenorPreco {
+public class MenorPrecoMain {
 
 	public static void main(String[] args) {
 

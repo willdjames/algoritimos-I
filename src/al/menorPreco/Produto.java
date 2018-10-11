@@ -17,5 +17,10 @@ public class Produto {
 	public double getValor() {
 		return valor;
 	}
+	
+	@Override
+	public String toString() {
+		return "{nome:" + nome + ", valor:" + valor + "}";
+	}
 
 }
