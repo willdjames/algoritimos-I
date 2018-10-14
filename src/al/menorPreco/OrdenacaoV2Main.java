@@ -1,9 +1,9 @@
 package al.menorPreco;
 
-import al.selectionSort.ProdutoSelectionSortImpl;
-import al.selectionSort.SelectionSort;
+import al.selectionSort.ProdutoSort;
 
 public class OrdenacaoV2Main {
+
 
 	public static void main(String[] args) {
 
@@ -12,27 +12,22 @@ public class OrdenacaoV2Main {
 				new Produto("Lamburguini", 100000),
 				new Produto("Brasilia", 10000),
 				new Produto("Fusca", 5000),
-				new Produto("CLio", 18000)
+				new Produto("Clio", 18000)
 			};
-		
 
-//		array original
-		imprime(produtos); 
+		ProdutoSort produtoSort = new ProdutoSort();
 		
-//		Ordena array sem mutar a original
-		Produto[] sort = new ProdutoSelectionSortImpl().sort(produtos, produtos.length);
+//		Ordenacao Selection Sort
+//		produtoSort.selectionSort(produtos, produtos.length);
 		
-
-		System.out.println();
-		imprime(sort);
+//		Ordenacao Insertion Sort
+//		produtoSort.insertionSort(produtos, produtos.length);
 		
-		System.out.println();
-		// array original
-		imprime(produtos); 
+		imprime(produtos);
 	}
 	
 
-
+//	so para imprmir
 	private static void imprime(Produto[] produtos) {
 		for (Produto produto : produtos) {
 			System.out.println(produto);
